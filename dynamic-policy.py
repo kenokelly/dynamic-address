@@ -180,7 +180,7 @@ if sys.argv[1]=='del':
    else:
      oldline = '{"2":[' + str(value) + ',' + str(adj_size) +']}'
    delete_line(oldline)
-
+   modify_file(tempFeed,'#del',oldline)
    calculate_md5()
    update_manifest(feedname)
    copy_tempFeed_to_feed()
